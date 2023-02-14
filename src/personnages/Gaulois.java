@@ -28,14 +28,17 @@ public class Gaulois {
 		romain.recevoirCoup(force / 3);
 	}
 	
-//	@Override
-//	public String toString() {
-//		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
-//	}
+	@Override
+	public String toString() {
+		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
+	}
 	
 	public static void main(String[] args) {
 		Gaulois asterix;
 		asterix = new Gaulois("Astérix", 8);
-		System.out.println(asterix);
+		System.out.println(asterix.toString());
+		asterix.prendreParole();
+		asterix.parler("Bonjour !");
+		asterix.frapper(minus);
 	}
 }
