@@ -43,17 +43,17 @@ public class Romain {
 				break;
 			case 1 :
 				if (nomEq == equipements[0]) {
-					System.out.println("Le soldat "+nom+" possède déjà un "+nomEq.toString()+" !");
+					System.out.println("Le soldat "+nom+" possède déjà un "+nomEq+" !");
 				} else {
-					extracted(nomEq);
+					ajouterEquipement(nomEq);
 				}
 				break;
 			default :
-			extracted(nomEq);
+				ajouterEquipement(nomEq);
 		}
 	}
 
-	private void extracted(Equipement nomEq) {
+	private void ajouterEquipement(Equipement nomEq) {
 		equipements[nbEquipement] = nomEq;
 		nbEquipement+=1;
 		System.out.println("Le soldat "+nom+" s'équipe avec un "+nomEq.toString()+".");
