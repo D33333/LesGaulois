@@ -47,6 +47,18 @@ public class Gaulois {
 		}
 	}
 
+	public void faireUneDonnation(Musee musee) {
+		String listeDons = "";
+		for(int i=0; i<nbTrophees; i++) {
+			listeDons+="- "+trophees[i]+"\n";
+			Trophee eqADonner = new Trophee(this,trophees[i]);
+			musee.donnerTrophees(this, eqADonner);
+		}
+		if (listeDons != "") {
+			parler("Je donne au musee tous mes trophees :\n"+listeDons);
+			nbTrophees = 0; //plus de trophée (tout a été donné)
+		}
+	}
 	
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("Astérix", 8);
